@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+dead_letter_queue.txt
+.DS_Store

@@ -1,0 +1,23 @@
+version: 2.1
+
+jobs:
+  build_and_test:
+    # Use a pre-built Docker image provided by CircleCI with Python 3.13
+    docker:
+      - image: cimg/python:3.13
+    steps:
+      - checkout # Pull code from your GitHub repository
+      
+      - run:
+          name: Install Dependencies
+          command: pip install -r requirements.txt
+          
+      - run:
+          name: Run Ingestion Integration Tests
+          command: python -m unittest test_pipeline.py
+
+workflows:
+  version: 2
+  test_pipeline:
+    jobs:
+      - build_and_test
