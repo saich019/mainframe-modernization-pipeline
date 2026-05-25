@@ -1,0 +1,6 @@
+01  CLAIM-RECORD.
+    05  CLAIM-ID           PIC X(11).
+    05  MEMBER-NAME        PIC X(18).
+    05  DATE-OF-SERVICE    PIC 9(8).
+    05  CLAIM-AMOUNT       PIC 9(9).
+    05  CLAIM-STATUS       PIC X(10).
